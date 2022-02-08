@@ -1,5 +1,3 @@
-/* Ce fichier CSS reset est utilisé : https://schnaps.it/archive/css/reset.css */
-
 @media (min-width: 540px) {
   .website {
   display: grid;
@@ -23,8 +21,28 @@ display: grid;
 gap: .5rem;
 }
 
-/* Bonus : Toute la hauteur ? */
-.website {min-height: 100vh;}
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 1280px;
+  
+}
 
-/* Bonus : Centré ? */
-.website {max-width: 800px; margin: 0 auto;}
+.navbar {
+  background-color: #313236;
+  border-radius: 2px;
+  max-width: 800px;
+}
+
+.navbar a {
+  color: #aaa;
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
