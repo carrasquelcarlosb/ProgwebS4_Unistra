@@ -1,24 +1,30 @@
-body {
-  font-family: sans-serif;
-  margin: auto;
-  max-width: 1280px;
+/* Ce fichier CSS reset est utilisé : https://schnaps.it/archive/css/reset.css */
+
+@media (min-width: 540px) {
+  .website {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+}
 }
 
-.navbar {
-  background-color: #313236;
-  border-radius: 2px;
-  max-width: 800px;
+
+.main {
+grid-column: 2;
+grid-row: 2;
 }
 
-.navbar a {
-  color: #aaa;
-  display: inline-block;
-  font-size: 15px;
-  padding: 10px;
-  text-decoration: none;
+.header,
+.footer {
+grid-column: 1 / -1;
 }
 
-.navbar a:hover {
-  color: #ffffff;
+.navigation-list {
+display: grid;
+gap: .5rem;
 }
 
+/* Bonus : Toute la hauteur ? */
+.website {min-height: 100vh;}
+
+/* Bonus : Centré ? */
+.website {max-width: 800px; margin: 0 auto;}
