@@ -1,6 +1,6 @@
 ---
 
-Universite de Strasbourg 
+Universite de Strasbourg
 Author: Carlos Benicio CARRASQUEL VILLARROEL 22015549
 
 ---
@@ -46,12 +46,21 @@ project's **Settings**.
 
 Read more about [user/group Pages][userpages] and [project Pages][projpages].
 
-## Troubleshooting
+#Description
 
-1. CSS is missing! That means that you have wrongly set up the CSS URL in your
-   HTML files. Have a look at the [index.html] for an example.
+DATABASE 1. See what tables and columns we need
+@2. Add dummy database
 
-[ci]: https://about.gitlab.com/gitlab-ci/
-[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
+Create:
+1. Admin needs to be logged in
+2. Check if data is text
+3. Check for empty fields
+4. If checks are met, do a request and create post
+
+Read:
+1. Read data from the database
+
+Update:
+1. Same as create, but we need values on the post
+2. Only edut his own posts
+3. Check if 
