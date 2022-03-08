@@ -10,10 +10,6 @@ if(isset($_POST["submit"])))
 
   //Instanciate SignupContr class
   include "../classes/signup.classes.php";
-  include "../classes/signup-contr.classes.php";
+  include "../classes/SignupContr.php";
   $signup = new SignupContr($uId, $pwd, $pwdRepeat, $emailAdress);
-  
-  //Running error handlers and user signups
-
-  //Going back to front page
 }

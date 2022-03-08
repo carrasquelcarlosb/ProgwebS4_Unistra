@@ -1,10 +1,10 @@
 <?php
-  require APPROOT . '/views/includes/head.php';
+  require APPROOT . '../views/includes/head.php';
 ?>
 
 <div class="navbar transparent">
   <?php
-  require APROOT .'/views/includes/navigation.php';
+  require APPROOT .'../views/includes/navigation.php';
   ?>
 </div>
 

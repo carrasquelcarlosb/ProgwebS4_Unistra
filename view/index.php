@@ -1,10 +1,10 @@
 <?php
-  require APROOT .'/views/includes/head.php';
+  require APPROOT .'../views/includes/head.php';
 ?>
 <?php
 <div id='section-landing'>
   <?php
-    require APROOT . '/view/includes/navigation.php';
+    require APPROOT . '../view/includes/navigation.php';
   ?>
 
   <div class="wrapper-landing">

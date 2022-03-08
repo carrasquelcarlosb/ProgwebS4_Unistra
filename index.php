@@ -1,11 +1,11 @@
 <?php
-  require APPROOT . '/web/carrasquel/public_html/progwebs4/views/includes/head.php';
-  include_once '/web/carrasquel/public_html/progwebs4/model/dbh.php';
+  require APPROOT . '../views/includes/head.php';
+  include_once '../model/Dbh.php';
 ?>
 
 <div class="section-landing">
   <?php
-  require APROOT .'/web/carrasquel/public_html/progwebs4/views/includes/navigation.php';
+  require APPROOT .'../views/includes/navigation.php';
   ?>
 </div>
 
@@ -13,7 +13,7 @@
     <h1> Intro page </h2>
     <h2> Subttitle</h2>
     <?php
-    $object = new Dhb;
+    $object = new Dbh;
     $object->connect();
     ?>
 </div>
