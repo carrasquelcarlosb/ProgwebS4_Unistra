@@ -10,7 +10,7 @@
 </div>
 
 <div class= "wrapper-landing">
-    <h1> Intro page </h2>
+    <h1> Intro page </h1>
     <h2> Subttitle</h2>
     <?php
     $object = new Dbh;
