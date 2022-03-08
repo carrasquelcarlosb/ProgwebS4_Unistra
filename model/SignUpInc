@@ -1,0 +1,3 @@
+<?php
+
+$dbServername = "osr-mysql.unistra.fr"
