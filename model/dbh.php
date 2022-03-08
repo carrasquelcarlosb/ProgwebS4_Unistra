@@ -24,13 +24,5 @@ class Dbh
             echo "Connection failed: ".$e->getMessage();
 
         }
-
-
-/*    catch (PDOException $e)
-    {
-      print " Error!: " . $e->getMessage(). "<br/>";
-      die();
-    }
-*/
   }
 }
