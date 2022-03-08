@@ -1,11 +1,11 @@
 <?php
-  require APPROOT . '/views/includes/head.php';
-  include_once '/model/dbh.php';
+  require APPROOT . '/web/carrasquel/public_html/progwebs4/views/includes/head.php';
+  include_once '/web/carrasquel/public_html/progwebs4/model/dbh.php';
 ?>
 
 <div class="section-landing">
   <?php
-  require APROOT .'/views/includes/navigation.php';
+  require APROOT .'/web/carrasquel/public_html/progwebs4/views/includes/navigation.php';
   ?>
 </div>
 
