@@ -8,7 +8,7 @@
       $this->db = new Database;
     }
 
-    public function trouveToutArticles()
+    public function findAllArticles()
     {
       $this->$db->query('SELECT* FROM articles ORDER_BY createdAt ASC');
       $resultats = $this->db->resultSet();
@@ -38,7 +38,7 @@
       {
           $this->$db->query('SELECT* FROM articles WHERE id =:id');
           $this->db->bind(':id', $id);
-          
+
       }
     }
 }

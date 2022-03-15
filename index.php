@@ -1,11 +1,10 @@
 <?php
-  require APPROOT . '../views/includes/head.php';
-  include_once '../model/Dbh.php';
+  include_once '../model/Model.php';
 ?>
 
 <div class="section-landing">
   <?php
-  require APPROOT .'../views/includes/navigation.php';
+  require '../view/includes/navigation.php';
   ?>
 </div>
 

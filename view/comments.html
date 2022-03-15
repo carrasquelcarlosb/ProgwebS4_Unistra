@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang = "en">
+<head>
+        <meta charset ="utf-8"/>
+        <meta name = "viewport"
+            content = "width=device-width, user-scalable=no, initial-scale =1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+            <title>Blog ProgWeb</title>
+            <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<section>
+    <h1>Formulaire de commentaire</h1>
+
+    <form method="post">
+        <div>
+            <label for="firstName">Prenom*</label>
+            <input type="text" id="firstName" name="firstName"/>
+        </div>
+        <div>
+            <label for= "lastName">Nom*</label>
+            <input type="text" id="lastName" name="lastName"/>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="30" rows="10"></textarea>
+        </div>
+
+        <button type="submit">Enregistrer</button>
+    </form>
+</section>
+
+<script src="veriform.js"></script>
+
+</body>
+</html>
