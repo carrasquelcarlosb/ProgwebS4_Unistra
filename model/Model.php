@@ -1,8 +1,8 @@
 <?php
-
+    include '.../config/config.php';
 class Model
 {
-    include '.../config/config.php';
+
     private $dbServername;
     private $dbUsername;
     private $dbPassword;
