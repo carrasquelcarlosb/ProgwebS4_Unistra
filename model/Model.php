@@ -17,7 +17,8 @@ class Model
         $this->charset = 'utf8';
         try {
             // data source name (DSN)
-            $dsn ="mysql:host=".$this->dbServername.";dbname=".$this->dbName.";charset=".$this->charset;
+            $dsn ="mysql:host=".$this->dbServername.";dbname=".$this->dbName."
+            ;charset=".$this->charset;
             $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
             $pdo->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (\Exception $e) {

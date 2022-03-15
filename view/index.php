@@ -1,5 +1,5 @@
 <?php
-  include '/views/includes/head.php';
+  include '/view/includes/head.php';
 ?>
 <?php
 <div id='section-landing'>

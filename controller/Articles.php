@@ -10,7 +10,7 @@ class Articles extends Controller
     {
         $articles = $this
             ->articleModel
-            ->trouveToutArticles();
+            ->findAllArticles();
         $data = ['articles' => $articles];
         $this->view('articles/index');
     }
@@ -40,11 +40,11 @@ class Articles extends Controller
 
             if(empty($data['title']))
             {
-              $data['titleError'] = "The title of a article cannot be empty";
+              $data['titleError'] = "The title of an article cannot be empty";
             }
             if(empty($data['body']))
             {
-              $data['bodyError'] = "The body of a article cannot be empty";
+              $data['bodyError'] = "The body of an article cannot be empty";
             }
 
 

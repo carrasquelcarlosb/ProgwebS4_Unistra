@@ -9,4 +9,4 @@ define('DB_NAME', 'carrasquel'); // Adjonction du nom DB
 define('URLROOT', 'https://osr-etudiant.unistra.fr/~carrasquel/');
 
 //Sitename
-define('SITENAME', 'Login & Register script');
+define('SITENAME', 'Blog');
