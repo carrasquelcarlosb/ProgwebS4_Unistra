@@ -1,6 +1,6 @@
 <?php
 require "../includes/head.php";
-require "../config/config.php";
+require ".../config/config.php";
 ?>
 
 <div class="navbar transparent">
