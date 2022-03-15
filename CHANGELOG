@@ -1,12 +1,15 @@
 TP1 
-Lors de la premiere seance du TP, je reussi a faire un template initiale en HTML, mais sans l'adjonction
+Lors de la première séance du TP, je reussi a faire un template initiale en HTML, mais sans l'adjonction
 des commentaires. 
 TP2 
-Toujours coince a l'adjonction des commentaires au site, j'ai commence a faire les bases des donnees. 
-Erreur generalise sur le reseau de l'Unistra (OSR) a cause de maintenance sur l'ensemble de reseau.
-Pas de chance avec les bdds et non plus avec l'adjonction des commentaires
+Toujours coince à l'adjonction des commentaires au site, j'ai commencé à faire les bases des données. 
+Erreur generaliissait sur le réseau de l'Unistra (OSR) a cause de maintenances sur l'ensemble de réseaux.
+Pas de chance avec les bds et non plus avec l'adjonction des commentaires
 TP3
-J'ai commence le development des bases des donnees, ainsi que la manipulation des donnees sur elles. Pas encore traite les commentaires non plus le front-end du site, template HTML efface
+J'ai commence le développement des bases des données, ainsi que la manipulation des données sur elles. Pas encore traite les commentaires non plus le front-end du site, template HTML efface
 TP4
-Traitement des erreus des affichages sur le site du reseau Unistra.
-Creation des boites de commentaires.
+Traitement des erreus des affichages sur le site du réseau Unistra.
+Création des boîtes de commentaires.
+TP5
+Affichage du site dans le serveur OSR reussi. 
+Debugging des fichiers Php en relation a la base des données  
