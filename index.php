@@ -12,7 +12,7 @@
     <h1> Intro page </h1>
     <h2> Subttitle</h2>
     <?php
-    $object = new Dbh;
+    $object = new Model;
     $object->connect();
     ?>
 </div>
