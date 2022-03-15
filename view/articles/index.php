@@ -14,7 +14,7 @@
     <a class="button green" href = "<?php echo URLROOT;?>/articles/create">
       New Article
     </a>
-  <?php endif; ?>
+
   <?php foreach($data['articles'] as $article): ?>
     <div class='container-item'>
     <php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id): ?>
@@ -22,7 +22,7 @@
       href = <?php echo URLROOT "./articles/update". $article->id ?> >
         Update
       </a>
-    <?php endif; ?>
+    
     <h2>
       <?php $article->$title; ?>
     </h2>
