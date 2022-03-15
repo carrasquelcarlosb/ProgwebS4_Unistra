@@ -1,6 +1,7 @@
 <?php
 require "../includes/head.php";
-require "../../config/config.php";
+$path = $_SERVER['DOCUMENT_ROOT'] ."/config/config.php";
+require $path;
 ?>
 
 <div class="navbar transparent">
