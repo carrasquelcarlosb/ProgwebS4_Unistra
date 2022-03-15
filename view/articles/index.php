@@ -10,12 +10,11 @@
 </div>
 
 <div class= "container">
-  <?php if( true == isLoggedIn())
-endif;?>
-    <a class="button green" href = "<?php echo URLROOT;?>/articles/create">
-      New Article
-    </a>
-
+    <?php if( true == isLoggedIn())?>
+        <a class="button green" href = "<?php echo URLROOT;?>/articles/create">
+            New Article
+        </a>
+    <?php endif; ?>
   <?php foreach($data['articles'] as $article): endforeach;?>
     <div class='container-item'>
         <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id):
