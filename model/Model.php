@@ -34,7 +34,7 @@ class Model
       }
       return $pdo;
   }
-
+/*
   protected function getAll($table, $obj)
   {
       $var = [];
@@ -47,4 +47,5 @@ class Model
       return $var;
       $req->closeCursor();
   }
+  */
 }
