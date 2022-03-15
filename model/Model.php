@@ -11,7 +11,7 @@ class Model
 
   public function setDbb()
   {
-        $this->dbServername = "DB_HOST";
+        $this->dbServername = "osr-mysql.unistra.fr";
         $this->dbUsername = "DB_NAME";
         $this->dbPassword = "DB_PASS";
         $this->dbName = "DB_NAME";
