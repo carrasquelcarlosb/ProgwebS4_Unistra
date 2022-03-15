@@ -4,7 +4,7 @@
 
 <div class="section-landing">
   <?php
-  require '../view/includes/navigation.php';
+  require 'view/includes/navigation.php';
   ?>
 </div>
 

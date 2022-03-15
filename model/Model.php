@@ -13,7 +13,7 @@ class Model
         $this->dbServername = "osr-mysql.unistra.fr";
         $this->dbUsername = "carrasquel";
         $this->dbPassword = "daswaG5H";
-        $this->dbName = "carrasquel"
+        $this->dbName = "carrasquel";
         $this->charset = 'utf8';
         try {
             // data source name (DSN)
