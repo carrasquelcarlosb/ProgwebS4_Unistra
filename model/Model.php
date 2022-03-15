@@ -2,6 +2,7 @@
 
 class Model
 {
+    include '../config/config.php';
     private $dbServername;
     private $dbUsername;
     private $dbPassword;
@@ -10,10 +11,10 @@ class Model
 
   public function setDbb()
   {
-        $this->dbServername = "osr-mysql.unistra.fr";
-        $this->dbUsername = "carrasquel";
-        $this->dbPassword = "daswaG5H";
-        $this->dbName = "carrasquel";
+        $this->dbServername = "DB_HOST";
+        $this->dbUsername = "DB_NAME";
+        $this->dbPassword = "DB_PASS";
+        $this->dbName = "DB_NAME";
         $this->charset = 'utf8';
         try {
             // data source name (DSN)

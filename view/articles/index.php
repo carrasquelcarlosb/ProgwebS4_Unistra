@@ -1,10 +1,11 @@
 <?php
-  require '/view/includes/head.php';
+  require '../includes/head.php';
+  require 'config/config.php';
 ?>
 
 <div class="navbar transparent">
   <?php
-  require '/view/includes/navigation.php';
+  require '../includes/navigation.php';
   ?>
 </div>
 

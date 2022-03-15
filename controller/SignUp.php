@@ -9,7 +9,7 @@ if(isset($_POST["submit"])))
   $email = $_POST["email"];
 
   //Instanciate SignupContr class
-  include "../classes/SignUpInc.php";
-  include "../classes/SignupContr.php";
+  include "classes/SignUpInc.php";
+  include "classes/SignupContr.php";
   $signup = new SignupContr($uId, $pwd, $pwdRepeat, $emailAdress);
 }
