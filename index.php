@@ -1,5 +1,5 @@
 <?php
-    require '/view/includes/head.php';
+    require 'view/includes/head.php';
     include_once 'model/Model.php';
 ?>
 
