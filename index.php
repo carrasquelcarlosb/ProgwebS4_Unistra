@@ -1,4 +1,5 @@
 <?php
+    require 'config/config.php';
     require 'view/includes/head.php';
     include_once 'model/Model.php';
 ?>
