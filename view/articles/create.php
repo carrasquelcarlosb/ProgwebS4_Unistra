@@ -1,11 +1,8 @@
 <?php
-  require '/view/includes/head.php';
-?>
+require "/view/includes/head.php"; ?>
 
 <div class="navbar transparent">
-  <?php
-  require APPROOT .'../views/includes/navigation.php';
-  ?>
+  <?php require APPROOT . "../views/includes/navigation.php"; ?>
 </div>
 
 <div class="container center">
@@ -18,14 +15,14 @@
       <input type="text" name ="title" placeholder="Title...">
 
       <span class ="invalidFeedback">
-        <?php echo $data['titleError']; ?>
+        <?php echo $data["titleError"]; ?>
       </span>
     </div>
     <div class ="form-item">
       <textarea name="body" placeholder="Enter your text..."></textarea>
 
       <span class ="invalidFeedback">
-        <?php echo $data['bodyError']; ?>
+        <?php echo $data["bodyError"]; ?>
       </span>
     </div>
     <button class ='button transparent' name ="submit" type = "submit"> submit</button>

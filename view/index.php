@@ -1,11 +1,8 @@
 <?php
-  include '/view/includes/head.php';
-?>
-<?php
+include "/view/includes/head.php"; ?>
+
 <div id='section-landing'>
-  <?php
-    require '/view/includes/navigation.php';
-  ?>
+  <?php require "/view/includes/navigation.php"; ?>
 
   <div class="wrapper-landing">
     <h1>Test title NUMERO 1</h1>
