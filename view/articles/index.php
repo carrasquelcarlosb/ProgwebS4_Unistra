@@ -19,7 +19,7 @@
     <div class='container-item'>
     <php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id): ?>
       <a class="button transparent"
-        href = <?php echo URLROOT "./articles/update.php". $article->id ?> ;>
+        href = "<?php echo URLROOT;?> ./articles/update.php". $article->id >
         Update
       </a>
 
