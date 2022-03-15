@@ -13,6 +13,6 @@
     <h2> Subttitle</h2>
     <?php
     $object = new Model;
-    $object->connect();
+    $object->setDbb();
     ?>
 </div>
