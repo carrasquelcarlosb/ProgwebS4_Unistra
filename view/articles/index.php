@@ -14,11 +14,9 @@
         <a class="button green" href = "<?php echo URLROOT;?>/articles/create">
             New Article
         </a>
-    <?php endif; ?>
   <?php foreach($data['articles'] as $article): endforeach;?>
     <div class='container-item'>
-        <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id):
-            endif; ?>
+        <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id):?>
             <a class="button transparent"
                 href = "<?php echo URLROOT;?> ./articles/update.php". $article->id >
                 Update
@@ -33,5 +31,8 @@
             <p>
                 <? php echo $article->body?>
             </p>
+        <?php endif; ?>
     </div>
+    <?php endforeach; ?>
+    <?php endif; ?>
 </div>
