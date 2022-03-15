@@ -1,5 +1,6 @@
 <?php
-  include_once 'model/Model.php';
+    require '/view/includes/head.php';
+    include_once 'model/Model.php';
 ?>
 
 <div class="section-landing">

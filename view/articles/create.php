@@ -1,5 +1,5 @@
 <?php
-  require APPROOT . '../views/includes/head.php';
+  require '/view/includes/head.php';
 ?>
 
 <div class="navbar transparent">

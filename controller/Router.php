@@ -8,7 +8,7 @@ class Router
         {
             spl_autoload_register(function($class))
             {
-                require_once('../model',$class,'.php');
+                require_once('/model',$class,'.php');
                 $url ='';
 
                 //Obtention de controlleur selon l'action de l'utilisateur

@@ -5,9 +5,6 @@ define('DB_USER', 'admin'); // Adjonction de ROOT DB
 define('DB_PASS', 'daswaG5H'); // Adjonction mot de passe ROOT
 define('DB_NAME', 'carrasquel'); // Adjonction du nom DB
 
-//APPROOT
-define('APPROOT', dirname(dirname(__FILE__)));
-
 //URLROOT(Dynamic links)
 define('URLROOT', 'https://osr-etudiant.unistra.fr/~carrasquel/');
 
