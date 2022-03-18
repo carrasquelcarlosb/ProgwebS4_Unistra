@@ -1,8 +1,9 @@
 <?php
-require APPROOT . "../views/includes/head.php"; ?>
+
+require_once APPROOT . "../view/includes/head.php"; ?>
 
 <div class="navbar transparent">
-  <?php require APPROOT . "../views/includes/navigation.php"; ?>
+  <?php require APPROOT . "../view/includes/navigation.php"; ?>
 </div>
 
 <div class="container center">

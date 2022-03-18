@@ -1,4 +1,4 @@
-<div> class ="container">
+<div class = "container">
 	<?php foreach ($data["articles"] as $article): ?>
 		<div class ="container-item">
 			<h2>

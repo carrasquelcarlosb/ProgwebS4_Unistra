@@ -1,37 +1,33 @@
 <?php
-include "config/config.php";
+require_once "config/config.php";
 class Model
 {
-    private $dbServername;
-    private $dbUsername;
-    private $dbPassword;
-    private $dbName;
-    private $charset;
-
     public function setDbb()
     {
-        $this->dbServername = DB_HOST;
-        $this->dbUsername = DB_NAME;
-        $this->dbPassword = DB_PASS;
-        $this->dbName = DB_NAME;
-        $this->charset = "utf8";
+        $dbServername = DB_HOST;
+        $dbUsername = DB_NAME;
+        $dbPassword = DB_PASS;
+        $dbName = DB_NAME;
+        $charset = "utf8";
         try {
             // data source name (DSN)
-            $dsn =
+            // $pdo = new PDO("sqlite:". dirname(__FILE__) . "/database.db");
+           $dsn =
                 "mysql:host=" .
-                $this->dbServername .
+                $dbServername .
                 ";dbname=" .
-                $this->dbName .
+                $dbName .
                 ";charset=" .
-                $this->charset;
-            $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
+                $charset;
+
+            $pdo = new PDO($dsn, $dbUsername, $dbPassword);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (\Exception $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
 
-    protected function getDbb()
+    public function getDbb()
     {
         if ($pdo == null) {
             $this->setDbb();
@@ -42,12 +38,12 @@ class Model
     protected function getAll($table, $obj)
     {
         $var = [];
-        $req = this->getDbb()->prepare(
-            "SELECT * FROM" . table . "ORDER BY id desc"
+        $req = $this->getDbb()->prepare(
+            "SELECT * FROM".table."ORDER BY id desc"
         );
         $req->execute();
         while ($date = $req->fetch(PDO::FETCH_ASSOC)) {
-            $var[] = new $obj($data);
+            $var[] = new $obj($date);
         }
         return $var;
         $req->closeCursor();

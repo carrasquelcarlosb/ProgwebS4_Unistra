@@ -1,7 +1,7 @@
 <?php
-    require 'config/config.php';
-    require 'view/includes/head.php';
-    include_once 'model/Model.php';
+    require_once 'config/config.php';
+    require_once 'view/includes/head.php';
+    require_once 'model/Model.php';
 ?>
 
 <div class="section-landing">
