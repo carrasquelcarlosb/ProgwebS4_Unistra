@@ -10,7 +10,7 @@ class Article
 
     public function findAllArticles()
     {
-        $this->$db->query("SELECT* FROM articles ORDER_BY createdAt ASC");
+        $this->db->query("SELECT* FROM articles ORDER_BY createdAt ASC");
         $resultats = $this->db->resultSet();
 
         return $resultats;
@@ -33,7 +33,7 @@ class Article
     }
     public function findPostById($id)
     {
-        $this->$db->query("SELECT* FROM articles WHERE id =:id");
+        $this->db->query("SELECT* FROM articles WHERE id =:id");
         $this->db->bind(":id", $id);
     }
 }
