@@ -1,35 +1,44 @@
 <?php
-require_once "../../config/config.php";
-require_once "../../model/validate.php";
-require_once "../includes/head.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/config/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/view/includes/navigation.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/view/includes/head.php';
 ?>
-<!DOCTYPE html>
+
+<?php
+session_start();
+if(isset($_POST['submit'])){
+    if(!empty($_POST['pseudo']) AND !empty($_POST['pwd'])){
+        // Default login values
+        $default_pseudo = "admin905";
+        $default_pwd = "admin";
+        // Chosen values
+        $chosen_pwd = htmlspecialchars($_POST['pwd']);
+        $chosen_pseudo = htmlspecialchars($_POST['pseudo']);
+        if( $chosen_pseudo == $default_pseudo AND $chosen_pwd == $default_pwd){
+            $_SESSION['pwd'] = $chosen_pwd;
+            header('Location: dashboard.php');
+        }
+        else{
+            echo "Your password or username doesn't match our database";
+        }
+
+    }
+    else{
+        echo "Please input all the required fields.";
+    }
+}
+?>
+
+<!DOCTYPE HTML>
 <html lang="en">
 
-
 <body>
-<form action="validate.php" method="post">
-    <div class="login-box">
-        <h1>Login</h1>
-
-        <div class="textbook">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" placeholder="Admin name"
-                   name="adminName" value="">
-        </div>
-
-        <div class="textbook">
-            <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="password" placeholder="Password"
-                   name="password" value="">
-        </div>
-
-        <input class="button" type="submit"
-               name="login" value="Sign In">
-    </div>
+<form method="POST" action="" align="center">
+        <input type="text" name="pseudo" autocomplete="off">
+    <br>
+        <input type="password" name="pwd">
+    <br><br>
+    <input type="submit" name = "submit">
 </form>
 </body>
-
 </html>
-
-?>

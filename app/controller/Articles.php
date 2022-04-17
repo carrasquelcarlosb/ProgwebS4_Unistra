@@ -1,5 +1,5 @@
 <?php
-require_once "../config/config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "app/config/config.php";
 
 class Articles extends Controller
 {

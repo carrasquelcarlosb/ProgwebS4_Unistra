@@ -1,6 +1,7 @@
 <?php
-require_once "../includes/head.php";
-require_once "../../config/config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/config/config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/head.php";
+
 if(isset($_POST['article_title'], $_POST['article_body']))
     { if(!empty($_POST['article_title']) AND !empty($_POST['article_body']) )
         {
@@ -15,8 +16,7 @@ if(isset($_POST['article_title'], $_POST['article_body']))
 <!DOCTYPE html>
 <html lang="">
 <div class="navbar transparent">
-  <?php
-   require_once APPROOT . "view/includes/navigation.php"; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/navigation.php"; ?>
 </div>
 
 <div class="container center">
@@ -26,12 +26,16 @@ if(isset($_POST['article_title'], $_POST['article_body']))
 
   <form action = "<?php echo URLROOT; ?>articles/create.php" method ="POST">
     <div class ="form-item">
-      <input type="text" name ="article_title" placeholder="Title">
+        <label>
+            <input type="text" name ="article_title" placeholder="Title">
+        </label>
     </div>
     <div class ="form-item">
-      <textarea name="article_body" placeholder="Enter your text..."></textarea>
+        <label>
+            <textarea name="article_body" placeholder="Enter your text..."></textarea>
+        </label>
     </div>
-    <button class ='button transparent' name ="submit" type = "submit"> submit</button>
+    <button class ='button transparent' name ="submit" type = "submit"> submit </button>
   </form>
 </div>
 </html>

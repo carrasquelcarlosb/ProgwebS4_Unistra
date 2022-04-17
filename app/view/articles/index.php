@@ -1,25 +1,23 @@
 <?php
-require_once "../../config/config.php";
-require_once "../includes/head.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/config/config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/head.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/helpers/sessionHelper.php";
 ?>
 <div class="navbar transparent">
-  <?php require "../includes/navigation.php"; ?>
+  <?php require $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/navigation.php"; ?>
 </div>
 
 <div class= "container">
-    <!--?php if (true == isLoggedIn());?>-->
-        <a class="button green" href = "<?php echo URLROOT; ?>view/articles/create.php">
-            New Article
-        </a>
+    <?php
+        if (isLoggedIn())
+            echo "<a class='button green' href='create.php'>New Article</a>"
+     ?>
 
-  <?php foreach ($data["articles"] as $article): ?>
+  <?php foreach (data["articles"] as $article): ?>
     <div class='container-item'>
-        <?php if (
-            isset($_SESSION["id"]) &&
-            $_SESSION["id"] == $article->id
-        ); ?>
+        <?php ?>
             <a class="button transparent"
-                href = "<?php echo URLROOT; ?> ./articles/update.php".$article->articleId >
+                href = "update.php".$article->articleId >
                 Update
             </a>
             <h2>

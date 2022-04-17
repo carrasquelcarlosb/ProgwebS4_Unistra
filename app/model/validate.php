@@ -1,6 +1,6 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "app/model/Model.php";
 
-require_once('Model.php');
 function test_input($data) {
 
     $data = trim($data);
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
         if(($user['adminName'] == $adminName) &&
             ($user['adminPwd'] == $password)) {
-            header("Location: welcome.php");
+            header("Location: dashboard.php");
         }
         else {
             echo "<script language='javascript'>";

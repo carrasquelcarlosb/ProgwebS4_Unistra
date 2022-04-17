@@ -1,20 +1,30 @@
 <?php
-include_once "model/Model.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "app/model/Model.php";
 class Controller
 {
     public $model;
-    public function __construct()
+    public function constructor()
     {
         $this->model = new Model();
     }
-    public function ()
+
+    public function index()
     {
-        $reslt = $this->model->getlogin(); // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
-        if ($reslt == 'login') {
-            include 'view/Afterlogin.php';
+        echo 'I am the Homepage';
+    }
+
+    public function show(int $id)
+    {
+        echo "I am the article";
+    }
+
+    public function isLoggedIn()
+    {
+        $result = $this->model->getlogin(); // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
+        if ($result == 'login') {
+            include_once $_SERVER['DOCUMENT_ROOT'] . 'app/view/admin/dashboard.php';
         } else {
-            include 'view/login.php';
+            include_once $_SERVER['DOCUMENT_ROOT'] . 'app/view/admin/login.php';
         }
     }
 }
-

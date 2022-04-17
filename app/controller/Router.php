@@ -1,47 +1,35 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "app/config/config.php";
 class Router
 {
-    private $_ctrl;
-    private $_view;
-    public function routeReq()
-        try
+    public $url;
+    public $routes = [];
+    public function constructor($url)
+    {
+        $this->url = trim($url, '/');
+    }
+
+    public function get(string $path, string $action)
+    {
+        $this->routes['GET'][] = new Route($path, $action);
+    }
+
+    public function run()
+    {
+        foreach($this->routes $_SERVER['REQUEST_METHOD'] as $route)
         {
-            spl_autoload_register(function($class))
+            if ($route->matches($this->url))
             {
-                require_once('/model',$class,'.php');
-                $url ='';
-
-                //Obtention de controlleur selon l'action de l'utilisateur
-                if(isset($_GET['url']))
-                {
-                    $url = explode('/',filter_var($_GET['url'],
-                    FILTER_SANITIZE_URL));
-
-                    $controller = ucfirst(strtolower($url[0]));
-                    $controllerClass="Controller".$controller;
-                    $controllerFile= "controllers/".controllerClass.".php";
-
-                    if(file_exists($controllerFile))
-                    {
-                        require_once($controllerFile);
-                        $this->_ctrl = new $controllerClass($url);
-                    }
-                    else
-                    {
-                        throw new Exception('Page introuvable');
-                    }
-                }
-                else
-                {
-                    require_once('controller/ControllerAccueil.php');
-                    $this->_ctrl = new ControllerAccueil($url);
-                }
+                $router->execute();
             }
+            return header('HTTP/1.0 404 Not found');
         }
-        // Gestion des erreurs
-        catch(Exception $a)
-        {
-            $errorMsg = $a->getMessage();
-            require_once('../view/viewError.php');
-        }
+    }
+    public function show()
+    {
+        echo $this->url;
+    }
+
+
+
 }
