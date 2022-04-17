@@ -1,8 +1,8 @@
 <?php
 //DATABASE PARAMETERS
-define('DB_HOST', 'localhost:8020'); // Adjonction de HOST du DB
-define('DB_NAME', 'carrasquel'); // Adjonction de ROOT DB
-define('DB_PASS', 'daswaG5H'); // Adjonction mot de passe ROOT
+define('DB_HOST', 'localhost:8020'); // Adding HOST to du DB
+define('DB_NAME', 'carrasquel'); // Adding ROOT DB
+define('DB_PASS', 'daswaG5H'); // Adding pass for ROOT
 //APPROOT
 define('APPROOT', dirname(__FILE__, 2) ."/");
 // https://osr-etudiant.unistra.fr/~carrasquel/progwebs4/
