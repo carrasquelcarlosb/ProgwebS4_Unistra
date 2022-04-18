@@ -4,7 +4,7 @@ require_once dirname(__DIR__, 1) . "/view/head.php";
 require_once dirname(__DIR__, 1) . "/helpers/sessionHelper.php";
 ?>
 <div class="navbar transparent">
-  <?php require $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/navigation.php"; ?>
+  <?php require dirname(__DIR__, 1) . "/view/navigation.php"; ?>
 </div>
 
 <div class= "container">
