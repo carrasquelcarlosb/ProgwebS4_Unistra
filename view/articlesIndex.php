@@ -1,7 +1,7 @@
 <?php
-require_once dirname(__DIR__, 2) . "/config/config.php";
-require_once dirname(__DIR__, 2) . "/view/includes/head.php";
-require_once dirname(__DIR__, 2) . "/helpers/sessionHelper.php";
+require_once dirname(__DIR__, 1) . "/config/config.php";
+require_once dirname(__DIR__, 1) . "/view/head.php";
+require_once dirname(__DIR__, 1) . "/helpers/sessionHelper.php";
 ?>
 <div class="navbar transparent">
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/navigation.php"; ?>
