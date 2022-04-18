@@ -1,13 +1,13 @@
 <nav class ="top-nav">
     <ul>
         <li>
-            <a href="/index.php"> Home </a>
+            <a href="index.php"> Home </a>
         </li>
         <li>
-            <a href="/app/view/articles/index.php"> Articles </a>
+            <a href="carrasquel/app/view/articles/index.php"> Articles </a>
         </li>
         <li class ="btn-login">
-            <a href="/app/view/admin/login.php"> Login </a>
+            <a href="carrasquel/app/view/admin/login.php"> Login </a>
         </li>
     </ul>
 </nav>
