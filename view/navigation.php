@@ -1,7 +1,7 @@
 <nav class ="top-nav">
     <ul>
         <li>
-            <a href="index.php"> Home </a>
+            <a href="includesIndex.php"> Home </a>
         </li>
         <li>
             <a href="view/articles/index.php"> Articles </a>
