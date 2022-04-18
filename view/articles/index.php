@@ -17,7 +17,7 @@ require_once dirname(__DIR__, 2) . "/helpers/sessionHelper.php";
     <div class='container-item'>
         <?php ?>
             <a class="button transparent"
-                href = "update.php".$article->articleId >
+               href = "update.php" .$article->articleId >
                 Update
             </a>
             <h2>

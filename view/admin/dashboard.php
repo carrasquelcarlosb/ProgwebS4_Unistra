@@ -19,5 +19,5 @@ if(!$_SESSION['pwd'])
 <meta charset="utf-8">
 </head>
 <body>
-<a href="/app/view/articles/create.php">Create a new article</a>
+<a href="/viewicles/create.php">Create a new article</a>
 </body>
