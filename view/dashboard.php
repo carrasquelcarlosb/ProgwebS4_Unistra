@@ -1,10 +1,10 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/config/config.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/head.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/helpers/sessionHelper.php";
+require_once dirname(__DIR__, 1) . "/config/config.php";
+require_once  __DIR__ . "head.php";
+require_once dirname(__DIR__, 1) . "/helpers/sessionHelper.php";
 ?>
 <div class="navbar transparent">
-    <?php require $_SERVER['DOCUMENT_ROOT'] . "/app/view/includes/navigation.php"; ?>
+    <?php require __DIR__ . "navigation.php"; ?>
 </div>
 <?php
 session_start();
@@ -13,11 +13,11 @@ if(!$_SESSION['pwd'])
     header('Location:connexion.php');
 }
 ?>
-<!DOCTYPE HTML
+<!DOCTYPE HTML>
 
 <head>
 <meta charset="utf-8">
 </head>
 <body>
-<a href="/viewicles/create.php">Create a new article</a>
+<a href="/view/create.php">Create a new article</a>
 </body>
