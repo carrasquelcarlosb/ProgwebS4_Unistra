@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "app/config/config.php";
+require_once dirname(__DIR__, 1). "config/config.php";
 
 class Articles extends Controller
 {
@@ -12,7 +12,7 @@ class Articles extends Controller
     {
         $articles = $this->articleModel->findAllArticles();
         $data = ["articles" => $articles];
-        $this->view("articles/index");
+        $this->view("articles/index", $data);
     }
 
     public function create()
@@ -27,7 +27,7 @@ class Articles extends Controller
             "bodyError" => "",
         ];
 
-        if ($_SERVER["REQUEST_METHOD"] == "ARTICLES") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
                 "user_id" => $_SESSION["user_id"],
@@ -62,6 +62,7 @@ class Articles extends Controller
 
     public function update($id)
     {
+        $article = $this->articleModel->findArticleById($id);
         if (isLoggedIn()) {
             header("Location: " . URLROOT . "/articles");
         } elseif ($article->user_id != $_SESSION["user_id"]) {
@@ -76,9 +77,11 @@ class Articles extends Controller
             "bodyError" => "",
         ];
 
-        if ($_SERVER["REQUEST_METHOD"] == "ARTICLES") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
+                "id" => $id,
+                "articles" => $article,
                 "title" => trim($_POST["title"]),
                 "body" => trim($_POST["body"]),
                 "titleError" => "",
@@ -93,16 +96,14 @@ class Articles extends Controller
             }
 
             if (
-                $data["article"]->title ==
-                $this->articleModel->findArticleById($id)->title
+                $data["title"] == $this->articleModel->findArticleById($id)->title
             ) {
                 $data["titleError"] ==
                     "Repeated article name, pls change title fren";
             }
 
             if (
-                $data["article"]->body ==
-                $this->articleModel->findArticleById($id)->body
+                $data["body"] == $this->articleModel->findArticleById($id)->body
             ) {
                 $data["bodyError"] ==
                     "Repeated text, pls change body text fren";
@@ -117,10 +118,10 @@ class Articles extends Controller
                     );
                 }
             } else {
-                $this->view("articles/create", $data);
+                $this->view("articles/update", $data);
             }
         }
 
-        $this->view("/articles/create", $data);
+        $this->view("articles/update", $data);
     }
 }

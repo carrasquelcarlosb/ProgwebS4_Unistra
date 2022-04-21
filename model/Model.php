@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/config/config.php";
+require_once dirname( __DIR__, 1) . "/config/config.php";
 class Model
 {
     private $pdo;

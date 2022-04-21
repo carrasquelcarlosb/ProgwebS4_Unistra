@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__DIR__, 1) . "/config/config.php";
 require_once dirname(__DIR__, 1) . "/view/head.php";
+require_once dirname(__DIR__,1) . "/controller/Articles.php";
 require_once dirname(__DIR__, 1) . "/helpers/sessionHelper.php";
 ?>
 <div class="navbar transparent">
@@ -13,7 +14,7 @@ require_once dirname(__DIR__, 1) . "/helpers/sessionHelper.php";
             echo "<a class='button green' href='create.php'>New Article</a>"
      ?>
 
-  <?php foreach (data["articles"] as $article): ?>
+  <?php foreach ( ): ?>
     <div class='container-item'>
         <?php ?>
             <a class="button transparent"
