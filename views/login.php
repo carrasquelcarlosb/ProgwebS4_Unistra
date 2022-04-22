@@ -1,7 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/app/config/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/app/view/includes/navigation.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/app/view/includes/head.php';
+require_once dirname(__DIR__) . '/config/config.php';
+require_once  dirname(__DIR__). '/views/navigation.php';
+require_once dirname(__DIR__) . '/views/head.php';
 ?>
 
 <?php

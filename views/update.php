@@ -1,9 +1,8 @@
 <?php
-
-require_once APPROOT . "../view/includes/head.php"; ?>
+require_once dirname(__DIR__) . "views/head.php"; ?>
 
 <div class="navbar transparent">
-  <?php require APPROOT . "../view/includes/navigation.php"; ?>
+  <?php require dirname(__DIR__) . "/views/navigation.php"; ?>
 </div>
 
 <div class="container center">
@@ -11,12 +10,12 @@ require_once APPROOT . "../view/includes/head.php"; ?>
     Update article
   </h1>
 
-  <form action = "<?php echo URLROOT; ?>/articles/update<?php $data["article"]
-    ->id; ?>"
-  method ="ARTICLE">
+  <form action = "<?php echo URLROOT; ?>/articles/update<?php if (isset($data)) {
+      $data['article']->id;
+  } ?>"
+  method ="POST">
     <div class ="form-item">
-      <input type="text" name ="title" value=" <?php echo $data["article"]
-          ->title; ?>">
+      <input type="text" name ="title" value=" <?php echo $data["article"]->title; ?>">
 
       <span class ="invalidFeedback">
         <?php echo $data["titleError"]; ?>

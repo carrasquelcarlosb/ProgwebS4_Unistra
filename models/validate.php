@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "app/model/Model.php";
+require_once dirname(__DIR__) . "models/Model.php";
 
 function test_input($data) {
 
@@ -30,5 +30,3 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
         }
     }
 }
-
-?>

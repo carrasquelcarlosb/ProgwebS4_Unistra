@@ -3,7 +3,7 @@ class Admins extends Controller
 {
     public function __construct()
     {
-        $this->model = $this->model('Admin');
+        $this->userModel = $this->model('Admin');
     }
 
     public function register() {
@@ -30,8 +30,8 @@ class Admins extends Controller
                 'confirmPasswordError' => ''
             ];
 
-            $nameValidation = "/^[a-zA-Z0-9]*$/";
-            $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+            $nameValidation = "/^[a-zA-Z'\d']*$/";
+            $passwordValidation = "/^(.{0,7}|[^a-z]*|'\D'*)$/i";
 
             //Validate username on letters/numbers
             if (empty($data['username'])) {
@@ -64,7 +64,7 @@ class Admins extends Controller
                 // Hash password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
-                //Register user from model function
+                //Register user from models function
                 if ($this->userModel->register($data)) {
                     //Redirect to the login page
                     header('location: ' . URLROOT . '/users/login');
