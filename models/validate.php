@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__) . "models/Model.php";
+require_once dirname(__DIR__) . "/models/Model.php";
 
 function test_input($data) {
 

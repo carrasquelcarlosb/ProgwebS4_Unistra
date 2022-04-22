@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__) . "views/head.php"; ?>
+require_once dirname(__DIR__) . "/views/head.php"; ?>
 
 <div class="navbar transparent">
   <?php require dirname(__DIR__) . "/views/navigation.php"; ?>
