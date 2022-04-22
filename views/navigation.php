@@ -4,10 +4,10 @@
             <a href="index.php"> Home </a>
         </li>
         <li>
-            <a href="view/articlesIndex.php"> Articles </a>
+            <a href="views/articlesIndex.php"> Articles </a>
         </li>
         <li class ="btn-login">
-            <a href="view/login.php"> Login </a>
+            <a href="views/login.php"> Login </a>
         </li>
     </ul>
 </nav>
