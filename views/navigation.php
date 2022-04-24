@@ -1,13 +1,17 @@
-<nav class ="top-nav">
+<nav class="top-nav">
     <ul>
         <li>
-            <a href="index.php"> Home </a>
+            <a href="<?php echo URL; ?>/index.php">Home</a>
         </li>
         <li>
-            <a href="views/articlesIndex.php"> Articles </a>
+            <a href="<?php echo URL; ?>/views/articlesIndex.php">Articles</a>
         </li>
-        <li class ="btn-login">
-            <a href="views/login.php"> Login </a>
+        <li class="btn-login">
+            <?php if(isset($_SESSION['user_id'])) : ?>
+                <a href="<?php echo URL; ?>/views/logout">Log out</a>
+            <?php else : ?>
+                <a href="<?php echo URL; ?>/views/login">Login</a>
+            <?php endif; ?>
         </li>
     </ul>
 </nav>
