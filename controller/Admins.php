@@ -3,7 +3,7 @@ class Admins extends Controller
 {
     public function __construct()
     {
-        $this->userModel = $this->model('Admin');
+        $this->adminModel = $this->model('Admin');
     }
 
     public function register() {
@@ -63,17 +63,9 @@ class Admins extends Controller
 
                 // Hash password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-
-                //Register user from models function
-                if ($this->userModel->register($data)) {
-                    //Redirect to the login page
-                    header('location: ' . URLROOT . '/users/login');
-                } else {
-                    die('Something went wrong.');
-                }
             }
         }
-        $this->view('users/register', $data);
+
     }
 
     public function login() {
@@ -108,7 +100,7 @@ class Admins extends Controller
 
             //Check if all errors are empty
             if (empty($data['usernameError']) && empty($data['passwordError'])) {
-                $loggedInUser = $this->userModel->login($data['username'], $data['password']);
+                $loggedInUser = $this->adminModel->login($data['username'], $data['password']);
 
                 if ($loggedInUser) {
                     $this->createUserSession($loggedInUser);
@@ -133,13 +125,13 @@ class Admins extends Controller
     public function createUserSession($user) {
         $_SESSION['user_id'] = $user->id;
         $_SESSION['username'] = $user->username;
-        header('location:' . URLROOT . '/pages/index');
+        header('location:' . URL . '/pages/index');
     }
 
     public function logout() {
         unset($_SESSION['user_id']);
         unset($_SESSION['username']);
-        header('location:' . URLROOT . '/users/login');
+        header('location:' . URL . '/users/login');
     }
 
 }

@@ -1,13 +1,10 @@
 <?php
 require_once dirname(__DIR__) . "/config/config.php";
 require_once dirname(__DIR__) . "/views/head.php";
+require_once dirname(__DIR__) . "/views/navigation.php";
 require_once dirname(__DIR__) . "/controller/Articles.php";
 require_once dirname(__DIR__) . "/helpers/sessionHelper.php";
 ?>
-<div class="navbar transparent">
-  <?php require dirname(__DIR__) . "/views/navigation.php"; ?>
-</div>
-
 <div class= "container">
     <?php
         if (isLoggedIn())
@@ -18,9 +15,9 @@ require_once dirname(__DIR__) . "/helpers/sessionHelper.php";
       foreach ($data['articles'] as $article ): ?>
         <div class='container-item'>
             <?php ?>
-                <a class="button transparent"
-                   href = "update.php" .$article->articleId >
-                    Update
+                <a class="button"
+                   href = "update.php" <?php $article->articleId->
+                    Update;?> >
                 </a>
                 <h2>
                     <?php $article->title; ?>
@@ -35,4 +32,4 @@ require_once dirname(__DIR__) . "/helpers/sessionHelper.php";
         </div>
         <?php endforeach;
   } ?>
-</div>
+

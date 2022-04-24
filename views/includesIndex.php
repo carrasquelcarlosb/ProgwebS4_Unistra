@@ -9,7 +9,7 @@
                 </h2>
 
                 <h3>
-                    <?php echo "Created on: " . data("F j h:m", strtotime($article->createdAt)); ?>
+                    <?php echo "Created on: " . $data("F j h:m", strtotime($article->createdAt)); ?>
                 </h3>
 
                 <p>

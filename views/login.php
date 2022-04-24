@@ -31,14 +31,15 @@ if(isset($_POST['submit'])){
 
 <!DOCTYPE HTML>
 <html lang="en">
+<form class="login" action="" method="post">
 
-<body>
-<form method="POST" action="" align="center">
-        <input type="text" name="pseudo" autocomplete="off">
-    <br>
-        <input type="password" name="pwd">
-    <br><br>
-    <input type="submit" name = "submit">
+    <div><label for="username">Username</label>
+        <input type="text" name="pseudo" id="username"></div>
+    <div><label for="password">Password</label>
+        <input type="password" name="pwd" id="password"></div>
+
+    <div class="actions">
+        <input type="submit" name="submit" value="Login">
+    </div>
 </form>
-</body>
-</html>
+<body>

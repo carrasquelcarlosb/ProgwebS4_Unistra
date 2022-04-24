@@ -3,6 +3,11 @@ require_once dirname(__DIR__). "/config/config.php";
 
 class Articles extends Controller
 {
+    /**
+     * @var mixed
+     */
+    private $articleModel;
+
     public function __construct()
     {
         $this->articleModel = $this->model("Article");
@@ -18,7 +23,7 @@ class Articles extends Controller
     public function create()
     {
         if (isLoggedIn()) {
-            header("Location: " . URLROOT . "/articles");
+            header("Location: " . URL . "/articles");
         }
         $data = [
             "title" => "",
@@ -46,7 +51,7 @@ class Articles extends Controller
 
             if (empty($data[" "]) && empty($data["bodyError"])) {
                 if ($this->articleModel->addArticle($data)) {
-                    header("Location: " . URLROOT . "/articles");
+                    header("Location: " . URL . "/articles");
                 } else {
                     die(
                         "Something went terribly wrong, please try again or not"
@@ -64,9 +69,9 @@ class Articles extends Controller
     {
         $article = $this->articleModel->findArticleById($id);
         if (isLoggedIn()) {
-            header("Location: " . URLROOT . "/articles");
+            header("Location: " . URL . "/articles");
         } elseif ($article->user_id != $_SESSION["user_id"]) {
-            header("Location: " . URLROOT . "/articles");
+            header("Location: " . URL . "/articles");
         }
         $article = $this->articleModel->findArticleById($id);
         $data = [
@@ -98,20 +103,18 @@ class Articles extends Controller
             if (
                 $data["title"] == $this->articleModel->findArticleById($id)->title
             ) {
-                $data["titleError"] ==
-                    "Repeated article name, pls change title fren";
+                $data["titleError"] = "The title of a article cannot be empty";
             }
 
             if (
                 $data["body"] == $this->articleModel->findArticleById($id)->body
             ) {
-                $data["bodyError"] ==
-                    "Repeated text, pls change body text fren";
+                $data["bodyError"] == "Repeated text, pls change body text ";
             }
 
             if (empty($data["titleError"]) && empty($data["bodyError"])) {
                 if ($this->articleModel->addArticle($data)) {
-                    header("Location: " . URLROOT . "/articles");
+                    header("Location: " . URL . "/articles");
                 } else {
                     die(
                         "Something went terribly wrong, please try again or not"
