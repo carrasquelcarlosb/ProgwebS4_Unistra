@@ -1,17 +1,17 @@
 <?php
 //URLROOT(Dynamic links)
-const URL = 'https://osr-etudiant.unistra.fr/~carrasquel/';
+const URL = 'http://localhost:33';
 //Sitename
 const SITENAME = 'Mon Blog';
 
 //---------------------------------------------------------
 
 const DB_TYPE = 'mysql';
-const DB_HOST = 'osr-mysql.unistra.fr';
+const DB_HOST = 'localhost';
 
 const DB_NAME = 'carrasquel';
 const DB_USER = 'carrasquel';
-const DB_PASS = 'daswaG5H';
+const DB_PASS = 'daswAG5H';
 
 //---------------------------------------------------------
 //---------------------------------------------------------

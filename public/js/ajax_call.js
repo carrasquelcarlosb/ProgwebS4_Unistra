@@ -1,4 +1,5 @@
 function callCrudAction(action, id) {
+    fetch()
     $("#loaderIcon").show();
     let queryString;
     switch (action) {
